@@ -68,7 +68,7 @@
     if (giftBtn) {
         giftBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            showToast('\u2728 Gift options available \u2014 contact us for wrapping');
+            showToast('\u2728 Lahjavaihtoehtoja saatavilla \u2014 ota yhteyttä paketointia varten');
         });
     }
 
@@ -95,7 +95,7 @@
         var message = document.getElementById('message').value.trim();
 
         if (name && email && message) {
-            showToast('Thank you, ' + name + '! We\u2019ll get back to you within 1\u20132 business days.');
+            showToast('Kiitos, ' + name + '! Palaamme asiaan 1\u20132 arkipäivän kuluessa.');
             form.reset();
         }
         console.log('Contact form submitted:', { name: name, email: email, message: message });

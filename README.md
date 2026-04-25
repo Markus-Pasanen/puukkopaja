@@ -1,70 +1,70 @@
 # Pieni puukkopaja
 
-Handmade Finnish puukko knives from Varkaus — a single-page artisan web presence.
+Käsityönä tehdyt suomalaiset puukot Varkaudesta — yksisivuinen käsityöläisverkkosivusto.
 
-## About
+## Tietoa
 
-Pieni puukkopaja ("The Little Knife Workshop") is a small artisan brand crafting traditional Finnish puukko knives in Varkaus, Finland. This site serves as the workshop's digital storefront, showcasing knife models, the crafting process, ordering information, and contact details.
+Pieni puukkopaja on pieni käsityöläisbrändi, joka valmistaa perinteisiä suomalaisia puukkoja Varkaudessa. Tämä sivusto toimii pajamme digitaalisena myymälänä esitellen puukkomalleja, valmistusprosessia, tilaustietoja ja yhteystiedot.
 
-## Tech stack
+## Teknologiapino
 
-- **HTML** — semantic, accessible single-page layout with smooth-scroll navigation
-- **Tailwind CSS** — utility-first styling via CDN with a custom Nordic forest color theme
-- **Font Awesome** — icon library for UI elements
-- **Google Fonts** — Inter (body) and Lora (headings)
-- **Vanilla JavaScript** — mobile menu, scroll-reveal animations, contact form, toast notifications
+- **HTML** — semanttinen, saavutettava yksisivuinen ulkoasu pehmeällä vieritysnavigoinnilla
+- **Tailwind CSS** — apuluokkapohjainen tyylittely CDN:n kautta mukautetulla pohjoismaisella metsäteemalla
+- **Font Awesome** — kuvakkeet käyttöliittymäelementeille
+- **Google Fonts** — Inter (leipäteksti) ja Lora (otsikot)
+- **Vanilla JavaScript** — mobiilivalikko, vierityspaljastusanimaatiot, yhteydenottolomake, ilmoitusviestit
 
-No build tools, no frameworks — just open `index.html` in a browser.
+Ei rakennustyökaluja, ei kehyksiä — avaa vain `index.html` selaimessa.
 
-## Color theme
+## Väriteema
 
-| Token | Hex | Role |
+| Nimi | Hex | Käyttötarkoitus |
 |---|---|---|
-| Pine | `#2C302E` | Primary text, dark sections |
-| Linen | `#EBE9E4` | Page background |
-| Wool | `#F4F2EE` | Cards and surfaces |
-| Lichen | `#6B6F64` | Secondary text, labels |
-| Rust | `#C27E3E` | Buttons, links, accents |
-| Moss | `#5A6B4A` | Borders, secondary accent |
-| Smoke | `#8C7A6B` | Tertiary accents |
-| Drift | `#D6D3C8` | Borders, dividers |
+| Pine | `#2C302E` | Ensisijainen teksti, tummat osiot |
+| Linen | `#EBE9E4` | Sivun tausta |
+| Wool | `#F4F2EE` | Kortit ja pinnat |
+| Lichen | `#6B6F64` | Toissijainen teksti, tarrat |
+| Rust | `#C27E3E` | Painikkeet, linkit, korostukset |
+| Moss | `#5A6B4A` | Reunukset, toissijainen korostus |
+| Smoke | `#8C7A6B` | Kolmannen tason korostukset |
+| Drift | `#D6D3C8` | Reunukset, jakajat |
 
-## Deployment
+## Julkaisu
 
-This site is designed to deploy directly to **GitHub Pages** with no build step.
+Tämä sivusto on suunniteltu julkaistavaksi suoraan **GitHub Pagesiin** ilman rakennusvaihetta.
 
-### Option 1: Deploy from root
+### Vaihtoehto 1: Julkaisu juurihakemistosta
 
-1. Push the repository to GitHub
-2. Go to **Settings → Pages**
-3. Under **Branch**, select `main` and `/ (root)`
-4. Click **Save**
+1. Työnnä repositorio GitHubiin
+2. Siirry kohtaan **Settings → Pages**
+3. Valitse **Branch**-kohdassa `main` ja `/ (root)`
+4. Klikkaa **Save**
 
-The site will be live at `https://<username>.github.io/<repo>/`.
+Sivusto on käytettävissä osoitteessa `https://<käyttäjätunnus>.github.io/<repo>/`.
 
-### Option 2: Custom domain
+### Vaihtoehto 2: Mukautettu verkkotunnus
 
-1. Add a `CNAME` file to the repository containing your domain (e.g., `pienipuukkopaja.fi`)
-2. In your DNS provider, point the domain to GitHub Pages:
-   - **CNAME record**: `<username>.github.io`
-3. Enable **Enforce HTTPS** in Settings → Pages
+1. Lisää `CNAME`-tiedosto repositorioon, joka sisältää verkkotunnuksesi (esim. `pienipuukkopaja.fi`)
+2. DNS-palveluntarjoajallasi osoita verkkotunnus GitHub Pagesiin:
+   - **CNAME-tietue**: `<käyttäjätunnus>.github.io`
+3. Ota käyttöön **Enforce HTTPS** kohdassa Settings → Pages
 
-## Project structure
+## Projektin rakenne
 
 ```
 pieni-puukkopaja/
-├── index.html          Main page
-├── main.js             Interactivity (menu, scroll, form, toast)
-├── style.css           Custom styles (reveal animations, hero bg, toasts)
+├── index.html          Pääsivu
+├── main.js             Interaktiivisuus (valikko, vieritys, lomake, ilmoitukset)
+├── style.css           Mukautetut tyylit (paljastusanimaatiot, hero-tausta, ilmoitukset)
 ├── public/
-│   ├── figurine.jpg    Figurine decorated puukko
-│   ├── hero.png        Hero background image
-│   ├── normal.jpg      Basic puukko
-│   ├── special.jpg     Custom order puukko
-│   └── workshop.png    Workshop photo
+│   ├── figurine.jpg    Koristekuvioitu puukko
+│   ├── hero.png        Hero-taustakuva
+│   ├── normal.jpg      Peruspuukko
+│   ├── special.jpg     Tilauspuukko
+│   └── workshop.png    Pajakuva
 └── README.md
 ```
 
-## License
+## Lisenssi
 
-All rights reserved. Images and content belong to Pieni puukkopaja.
+Kaikki oikeudet pidätetään. Kuvat ja sisältö kuuluvat Pieni puukkopajalle.

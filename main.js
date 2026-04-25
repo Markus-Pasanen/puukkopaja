@@ -94,11 +94,36 @@
         var email   = document.getElementById('email').value.trim();
         var message = document.getElementById('message').value.trim();
 
-        if (name && email && message) {
-            showToast('Kiitos, ' + name + '! Palaamme asiaan 1\u20132 arkipäivän kuluessa.');
-            form.reset();
-        }
-        console.log('Contact form submitted:', { name: name, email: email, message: message });
+        if (!name || !email || !message) return;
+
+        var btn = form.querySelector('button[type="submit"]');
+        var orig = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Lähetetään...';
+
+        var data = new FormData(form);
+        data.append('subject', 'Pieni puukkopaja - uusi yhteydenotto');
+
+        fetch(form.action, {
+            method: 'POST',
+            body: data
+        })
+        .then(function (res) { return res.json(); })
+        .then(function (result) {
+            if (result.success) {
+                showToast('Kiitos, ' + name + '! Palaamme asiaan 1\u20132 arkipäivän kuluessa.');
+                form.reset();
+            } else {
+                showToast('Virhe: ' + (result.message || 'Lähetys epäonnistui. Yritä uudelleen.'));
+            }
+        })
+        .catch(function () {
+            showToast('Verkkovirhe. Tarkista yhteys ja yritä uudelleen.');
+        })
+        .finally(function () {
+            btn.disabled = false;
+            btn.innerHTML = orig;
+        });
     });
 
     /* ---------- FOOTER YEAR ---------- */

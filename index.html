@@ -18,8 +18,8 @@
                         pine:   '#2C302E',
                         linen:  '#EBE9E4',
                         wool:   '#F4F2EE',
-                        lichen: '#6B6F64',
-                        rust:   '#C27E3E',
+                        lichen: '#666a5f',
+                        rust:   '#aa6626',
                         moss:   '#5A6B4A',
                         smoke:  '#8C7A6B',
                         drift:  '#D6D3C8',
@@ -382,7 +382,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
                 <!-- Contact info -->
-                <div class="lg:col-span-2 space-y-6">
+                <div class="lg:col-span-2 flex flex-col gap-6">
                     <div class="bg-wool rounded-xl p-6 border border-drift shadow-sm flex gap-4">
                         <div class="w-10 h-10 rounded-xl bg-rust/10 flex-shrink-0 flex items-center justify-center">
                             <i class="fa-solid fa-envelope text-rust"></i>
@@ -410,11 +410,15 @@
                             <p class="text-pine text-sm">Pajakatu 7, 78250 Varkaus, Suomi</p>
                         </div>
                     </div>
+                    <div class="rounded-xl overflow-hidden border border-drift shadow-sm flex-1 min-h-[200px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1101.7279999470131!2d27.88646277773505!3d62.32849460858783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469b2719ce5cbc95%3A0x7fcbfaa5dc6cf581!2sSavontie%20(S-Market)!5e0!3m2!1sfi!2sfi!4v1777140451239!5m2!1sfi!2sfi" title="Pieni puukkopaja - sijainti kartalla" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
 
                 <!-- Contact form -->
-                <form id="contact-form" class="lg:col-span-3 bg-wool rounded-2xl border border-drift shadow-lg p-8 space-y-5 reveal">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="lg:col-span-3 bg-wool rounded-2xl border border-drift shadow-lg p-8 space-y-5 reveal">
                     <h3 class="text-xl font-bold text-pine mb-2 font-serif">Lähetä viesti</h3>
+                    <input type="hidden" name="access_key" value="f358d285-d9e0-42f7-898c-6d159045dd1f">
                     <div>
                         <label for="name" class="block text-sm font-medium text-pine mb-1.5">Nimi</label>
                         <input type="text" id="name" name="name" required
@@ -433,6 +437,7 @@
                             class="form-input w-full px-4 py-3 rounded-xl border border-drift bg-linen/10 text-pine placeholder:text-lichen/50 focus:outline-none focus:ring-2 focus:ring-moss focus:border-moss transition resize-none"
                             placeholder="Kerro millaisen puukon haluaisit..."></textarea>
                     </div>
+                    <div class="h-captcha" data-captcha="true" data-lang="fi"></div>
                     <button type="submit"
                         class="w-full sm:w-auto px-8 py-3.5 bg-rust text-white font-bold text-base rounded-xl hover:bg-rust/90 active:bg-moss active:scale-[0.97] transition-all shadow-lg shadow-rust/25 hover:shadow-rust/40">
                         <i class="fa-solid fa-paper-plane mr-2"></i> Lähetä viesti
@@ -469,6 +474,7 @@
     </footer>
 
     <!-- ===== SCRIPTS ===== -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="main.js"></script>
 </body>
 </html>

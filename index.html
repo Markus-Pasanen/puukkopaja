@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pieni puukkopaja &mdash; Handmade Finnish Puukko Knives from Varkaus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pine:   '#2C302E',
+                        linen:  '#EBE9E4',
+                        wool:   '#F4F2EE',
+                        lichen: '#6B6F64',
+                        rust:   '#C27E3E',
+                        moss:   '#5A6B4A',
+                        smoke:  '#8C7A6B',
+                        drift:  '#D6D3C8',
+                    },
+                    fontFamily: {
+                        sans:  ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Lora', 'Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-linen text-pine font-sans antialiased">
+
+    <!-- ===== NAVBAR ===== -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-pine shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-18">
+                <!-- Logo + Brand -->
+                <a href="#hero" class="flex items-center gap-3 text-white hover:text-rust transition-colors duration-300 no-underline">
+                    <svg class="w-9 h-9 lg:w-10 lg:h-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="44" height="44" rx="6" stroke="#C27E3E" stroke-width="2.5"/>
+                        <path d="M14 16L24 36L34 16" stroke="#C27E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="24" y1="28" x2="24" y2="36" stroke="#C27E3E" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span class="text-lg lg:text-xl font-bold tracking-tight whitespace-nowrap font-serif">Pieni puukkopaja</span>
+                </a>
+
+                <!-- Desktop nav -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                    <a href="#about"    class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">About</a>
+                    <a href="#knives"   class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Knives</a>
+                    <a href="#process"  class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Process</a>
+                    <a href="#order"    class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Order</a>
+                    <a href="#contact"  class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Contact</a>
+                </nav>
+
+                <!-- Hamburger button (mobile) -->
+                <button id="menu-btn" class="lg:hidden text-white hover:text-rust transition-colors duration-300 focus:outline-none" aria-label="Toggle menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="lg:hidden hidden pb-4">
+                <nav class="flex flex-col gap-3 text-sm font-medium tracking-wide border-t border-white/10 pt-4">
+                    <a href="#about"    class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">About</a>
+                    <a href="#knives"   class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Knives</a>
+                    <a href="#process"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Process</a>
+                    <a href="#order"    class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Order</a>
+                    <a href="#contact"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="relative min-h-screen pt-16 overflow-hidden bg-pine flex items-center">
+        <!-- Parallax background -->
+        <div class="hero-bg"></div>
+
+        <!-- Desktop: full-width gradient overlay -->
+        <div class="hidden md:block absolute inset-0 z-[2]"
+             style="background: linear-gradient(90deg, rgba(44,48,46,1) 0%, rgba(44,48,46,0.8) 50%, rgba(44,48,46,0.2) 100%);">
+        </div>
+
+
+        <!-- Mobile: full-width gradient overlay -->
+        <div class="md:hidden absolute inset-0 z-[1]"
+             style="background: linear-gradient(0deg, rgba(44,48,46,0.98) 0%, rgba(44,48,46,0.75) 50%, rgba(44,48,46,0.25) 80%, transparent 100%);">
+        </div>
+
+        <!-- Subtle texture overlay (left area) -->
+        <div class="absolute inset-0 md:right-1/2 opacity-10 z-[2]" style="background-image: radial-gradient(circle at 20% 50%, #EBE9E4 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="w-full md:w-1/2 text-left">
+                <p class="text-white text-sm lg:text-base font-semibold tracking-[0.2em] uppercase mb-4">Varkaus, Finland</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-6 font-serif">
+                    Handmade<br class="sm:hidden"> Finnish Puukko Knives
+                </h1>
+                <p class="text-lg sm:text-xl lg:text-2xl text-white/90 max-w-lg mb-10 leading-relaxed">
+                    Every knife carries the spirit of the northern forest. Handcrafted with tradition, forged to last generations.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-start">
+                    <a href="#order" class="inline-flex items-center justify-center px-8 py-4 bg-rust text-white font-bold text-base rounded-xl hover:bg-rust/90 active:bg-moss active:scale-[0.97] transition-all shadow-lg shadow-rust/25 hover:shadow-rust/40 no-underline">
+                        <i class="fa-solid fa-cart-shopping mr-2"></i> Order normally
+                    </a>
+                    <a href="#order" data-gift class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/70 text-white font-bold text-base rounded-xl hover:bg-white/10 hover:border-white/90 active:scale-[0.97] transition-all no-underline">
+                        <i class="fa-solid fa-gift mr-2"></i> Order as a gift
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="py-20 lg:py-28 bg-linen reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Text -->
+                <div>
+                    <p class="text-lichen text-sm font-semibold tracking-[0.2em] uppercase mb-3">Our story</p>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pine mb-6 leading-tight font-serif">
+                        A tradition passed through hands
+                    </h2>
+                    <p class="text-pine leading-relaxed mb-4">
+                        Pieni puukkopaja &mdash; &ldquo;The Little Knife Workshop&rdquo; &mdash; was born from a lifelong passion for the Finnish
+                        wilderness. For over two decades, our artisan has been shaping puukko knives by hand in a small workshop
+                        nestled in <strong class="text-pine">Varkaus</strong>, in the heart of the Finnish Lakeland.
+                    </p>
+                    <p class="text-pine leading-relaxed mb-4">
+                        The puukko is more than a tool; it is a symbol of self-reliance, craftsmanship, and respect for nature.
+                        Every knife that leaves our workshop carries this heritage &mdash; from the responsibly sourced birch handle
+                        to the hand-ground carbon steel blade.
+                    </p>
+                    <div class="mt-6 flex items-start gap-3 bg-linen/50 rounded-xl p-5 border border-moss/20 shadow-sm">
+                        <i class="fa-solid fa-door-open text-rust text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="font-semibold text-pine mb-1">Visit the workshop</h4>
+                            <p class="text-sm text-pine leading-relaxed">
+                                You are welcome to visit our workshop in Varkaus to see the knives in person and
+                                watch the craft unfold. Please contact us in advance to schedule your visit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workshop photo -->
+                <div class="rounded-2xl overflow-hidden border border-moss/20 shadow-lg aspect-[4/3]">
+                    <img src="public/workshop.png" alt="Knife workshop in Varkaus" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KNIFE MODELS / PRICING ===== -->
+    <section id="knives" class="py-20 lg:py-28 bg-linen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-lichen text-sm font-semibold tracking-[0.2em] uppercase mb-3">Our knives</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pine mb-4 font-serif">Models &amp; Pricing</h2>
+                <p class="text-pine max-w-xl mx-auto">Three distinct traditions, each crafted with the same care and attention to detail.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Figurine decorated -->
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal">
+                    <div class="aspect-[4/3] overflow-hidden bg-moss/5">
+                        <img src="public/figurine.jpg" alt="Figurine decorated puukko knife" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Figurine Decorated</h3>
+                        <p class="text-pine text-sm leading-relaxed mb-4">
+                            Intricate handle carvings inspired by Finnish folklore. Each piece is a collector&rsquo;s item,
+                            featuring detailed figurine decorations and a polished carbon steel blade.
+                        </p>
+                        <p class="text-2xl font-extrabold text-rust">120 &euro;</p>
+                        <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                            Order now <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Basic -->
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal">
+                    <div class="aspect-[4/3] overflow-hidden bg-moss/5">
+                        <img src="public/normal.jpg" alt="Basic Finnish puukko knife with birch handle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Basic Puukko</h3>
+                        <p class="text-pine text-sm leading-relaxed mb-4">
+                            A faithful companion for everyday carry, fishing, and camping. Simple, sturdy, and beautiful
+                            in its minimalism. Birch handle and carbon steel blade.
+                        </p>
+                        <p class="text-2xl font-extrabold text-rust">60 &euro;</p>
+                        <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                            Order now <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Custom order -->
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal">
+                    <div class="aspect-[4/3] overflow-hidden bg-moss/5">
+                        <img src="public/special.jpg" alt="Custom order puukko knife being handcrafted" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Custom Order</h3>
+                        <p class="text-pine text-sm leading-relaxed mb-3">
+                            Design your own puukko. Choose blade length and handle materials to create a knife
+                            that is uniquely yours.
+                        </p>
+                        <div class="mb-4 space-y-1">
+                            <p class="text-xs text-pine font-medium uppercase tracking-wide">Blade options:</p>
+                            <div class="flex gap-2">
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium hover:border-moss transition-colors">70 mm</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium hover:border-moss transition-colors">80 mm</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium hover:border-moss transition-colors">95 mm</span>
+                            </div>
+                        </div>
+                        <p class="text-xl font-extrabold text-rust">Starts from 95 &euro;</p>
+                        <a href="#contact" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                            Inquire <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESS / MATERIALS ===== -->
+    <section id="process" class="py-20 lg:py-28 bg-linen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-lichen text-sm font-semibold tracking-[0.2em] uppercase mb-3">Craftsmanship</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pine mb-4 font-serif">Materials &amp; Process</h2>
+                <p class="text-pine max-w-xl mx-auto">Every puukko is born from carefully selected materials and time-honored techniques.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-wool rounded-xl p-6 text-center border border-drift hover:shadow-lg card-lift group cursor-default reveal">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
+                        <i class="fa-solid fa-tree text-2xl text-rust"></i>
+                    </div>
+                    <h3 class="font-bold text-pine mb-2">Finnish Birch</h3>
+                    <p class="text-sm text-pine leading-relaxed">
+                        Handles carved from locally sourced curly birch, prized for its strength and beautiful grain patterns.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-wool rounded-xl p-6 text-center border border-drift hover:shadow-lg card-lift group cursor-default reveal">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
+                        <i class="fa-solid fa-fire text-2xl text-rust"></i>
+                    </div>
+                    <h3 class="font-bold text-pine mb-2">Carbon Steel</h3>
+                    <p class="text-sm text-pine leading-relaxed">
+                        High-carbon steel blades forged and tempered for exceptional edge retention and easy field sharpening.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-wool rounded-xl p-6 text-center border border-drift hover:shadow-lg card-lift group cursor-default reveal">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
+                        <i class="fa-solid fa-hand-sparkles text-2xl text-rust"></i>
+                    </div>
+                    <h3 class="font-bold text-pine mb-2">Hand Finishing</h3>
+                    <p class="text-sm text-pine leading-relaxed">
+                        Every surface is finished by hand &mdash; sanded, polished, and oiled until it feels right in the palm.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-wool rounded-xl p-6 text-center border border-drift hover:shadow-lg card-lift group cursor-default reveal">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
+                        <i class="fa-solid fa-scroll text-2xl text-rust"></i>
+                    </div>
+                    <h3 class="font-bold text-pine mb-2">Leather Sheath</h3>
+                    <p class="text-sm text-pine leading-relaxed">
+                        A hand-stitched Finnish leather sheath completes every knife, embossed with the workshop mark.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORDER & PAYMENT ===== -->
+    <section id="order" class="py-20 lg:py-28 bg-pine relative overflow-hidden reveal">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 80% 20%, #EBE9E4 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-white text-sm font-semibold tracking-[0.2em] uppercase mb-3">How to order</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 font-serif">Order &amp; Payment</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Ordering methods -->
+                <div class="bg-black/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
+                        <i class="fa-solid fa-clipboard-list text-rust"></i> How to place an order
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-envelope text-rust"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Email</h4>
+                                <p class="text-white text-sm">Send us your order or inquiry at <span class="text-white">info@pienipuukkopaja.fi</span></p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-phone text-rust"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Phone call</h4>
+                                <p class="text-white text-sm">Call us directly to discuss your knife &mdash; we speak Finnish and English.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-message text-rust"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Contact form</h4>
+                                <p class="text-white text-sm">Use the form below to send a message and we will reply within 1&ndash;2 business days.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment methods -->
+                <div class="bg-black/10 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3 font-serif">
+                        <i class="fa-solid fa-credit-card text-rust"></i> Payment options
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-coins text-rust"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Cash</h4>
+                                <p class="text-white text-sm">Pay in person when you pick up your knife at the workshop in Varkaus.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-mobile-screen text-rust"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">MobilePay</h4>
+                                <p class="text-white text-sm">Fast and secure payment via MobilePay &mdash; popular across the Nordics.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-credit-card text-rust"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Card</h4>
+                                <p class="text-white text-sm">We accept major debit and credit cards for workshop purchases.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-20 lg:py-28 bg-linen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-lichen text-sm font-semibold tracking-[0.2em] uppercase mb-3">Get in touch</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pine mb-4 font-serif">Contact Us</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+                <!-- Contact info -->
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-wool rounded-xl p-6 border border-drift shadow-sm flex gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-rust/10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-rust"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-pine mb-1">Email</h4>
+                            <p class="text-pine text-sm break-all">info@pienipuukkopaja.fi</p>
+                        </div>
+                    </div>
+                    <div class="bg-wool rounded-xl p-6 border border-drift shadow-sm flex gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-rust/10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fa-solid fa-phone text-rust"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-pine mb-1">Phone</h4>
+                            <p class="text-pine text-sm">+358 40 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="bg-wool rounded-xl p-6 border border-drift shadow-sm flex gap-4">
+                        <div class="w-10 h-10 rounded-xl bg-rust/10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fa-solid fa-location-dot text-rust"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-pine mb-1">Workshop</h4>
+                            <p class="text-pine text-sm">Pajakatu 7, 78250 Varkaus, Finland</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <form id="contact-form" class="lg:col-span-3 bg-wool rounded-2xl border border-drift shadow-lg p-8 space-y-5 reveal">
+                    <h3 class="text-xl font-bold text-pine mb-2 font-serif">Send a message</h3>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-pine mb-1.5">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="form-input w-full px-4 py-3 rounded-xl border border-drift bg-linen/10 text-pine placeholder:text-lichen/50 focus:outline-none focus:ring-2 focus:ring-moss focus:border-moss transition"
+                            placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-pine mb-1.5">Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="form-input w-full px-4 py-3 rounded-xl border border-drift bg-linen/10 text-pine placeholder:text-lichen/50 focus:outline-none focus:ring-2 focus:ring-moss focus:border-moss transition"
+                            placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-pine mb-1.5">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="form-input w-full px-4 py-3 rounded-xl border border-drift bg-linen/10 text-pine placeholder:text-lichen/50 focus:outline-none focus:ring-2 focus:ring-moss focus:border-moss transition resize-none"
+                            placeholder="Tell us about the knife you&rsquo;d like..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full sm:w-auto px-8 py-3.5 bg-rust text-white font-bold text-base rounded-xl hover:bg-rust/90 active:bg-moss active:scale-[0.97] transition-all shadow-lg shadow-rust/25 hover:shadow-rust/40">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Send message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-pine py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <!-- Brand -->
+            <div class="flex items-center gap-2 text-white text-sm">
+                <svg class="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 16L24 36L34 16" stroke="#C27E3E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>&copy; <span id="year"></span> Pieni puukkopaja. All rights reserved.</span>
+            </div>
+
+            <!-- Social icons -->
+            <div class="flex items-center gap-5">
+                <a href="#" class="text-white/70 hover:text-rust transition-colors text-lg" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white/70 hover:text-rust transition-colors text-lg" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white/70 hover:text-rust transition-colors text-lg" aria-label="Pinterest">
+                    <i class="fa-brands fa-pinterest-p"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="main.js"></script>
+</body>
+</html>

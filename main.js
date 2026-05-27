@@ -2,9 +2,6 @@
     'use strict';
 
     /* ---------- DOM REFS ---------- */
-    const menuBtn    = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon   = document.getElementById('menu-icon');
     const navbar     = document.getElementById('navbar');
     const hero       = document.getElementById('hero');
     const form       = document.getElementById('contact-form');
@@ -12,28 +9,37 @@
 
     const NAV_H      = 64;
 
-    /* ---------- MOBILE MENU TOGGLE + STAGGER ---------- */
-    menuBtn.addEventListener('click', function () {
-        const isOpen = !mobileMenu.classList.contains('hidden');
-        if (isOpen) {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('mobile-menu-open');
-            menuIcon.className = 'fa-solid fa-bars text-2xl';
-        } else {
-            mobileMenu.classList.remove('hidden');
-            void mobileMenu.offsetWidth;
-            mobileMenu.classList.add('mobile-menu-open');
-            menuIcon.className = 'fa-solid fa-xmark text-2xl';
-        }
-    });
+    /* ---------- MOBILE MENU TOGGLE (hamburger → overlay) ---------- */
+    var menuToggle = document.getElementById('menu-toggle');
+    var mobileOverlay = document.getElementById('mobile-overlay');
 
-    document.querySelectorAll('.mobile-link').forEach(function (link) {
-        link.addEventListener('click', function () {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('mobile-menu-open');
-            menuIcon.className = 'fa-solid fa-bars text-2xl';
+    if (menuToggle && mobileOverlay) {
+        function openMenu() {
+            menuToggle.classList.add('active');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            mobileOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            mobileOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', function () {
+            if (mobileOverlay.classList.contains('open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
-    });
+
+        document.querySelectorAll('#mobile-overlay .mobile-link').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+    }
 
     /* ---------- SMOOTH SCROLL WITH OFFSET ---------- */
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -127,7 +133,10 @@
     });
 
     /* ---------- FOOTER YEAR ---------- */
-    yearEl.textContent = new Date().getFullYear();
+    var currentYear = new Date().getFullYear();
+    yearEl.textContent = currentYear;
+    var mobileYear = document.getElementById('mobile-year');
+    if (mobileYear) mobileYear.textContent = currentYear;
 
     /* ---------- GALLERY CAROUSEL ---------- */
     (function () {

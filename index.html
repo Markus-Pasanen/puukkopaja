@@ -60,21 +60,28 @@
                 </nav>
 
                 <!-- Hamburger button (mobile) -->
-                <button id="menu-btn" class="lg:hidden text-white hover:text-rust transition-colors duration-300 focus:outline-none" aria-label="Toggle menu">
-                    <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                <button id="menu-toggle" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none z-50 text-white" aria-label="Avaa valikko" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </button>
             </div>
 
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="lg:hidden hidden pb-4">
-                <nav class="flex flex-col gap-3 text-sm font-medium tracking-wide border-t border-white/10 pt-4">
-                    <a href="#about"    class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Meistä</a>
-                    <a href="#knives"   class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Puukot</a>
-                    <a href="#process"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Prosessi</a>
-                    <a href="#gallery"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Galleria</a>
-                    <a href="#order"    class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Tilaa</a>
-                    <a href="#contact"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Ota yhteyttä</a>
-                </nav>
+            <!-- Mobile menu overlay -->
+            <div id="mobile-overlay" class="fixed inset-0 z-40 flex flex-col transition-all duration-300 md:hidden opacity-0 pointer-events-none bg-pine/95 backdrop-blur-xl overflow-y-auto">
+                <div class="flex-1 flex flex-col items-center justify-center">
+                    <div class="flex flex-col items-center gap-2">
+                        <a href="#about"    class="mobile-link text-white/80 hover:text-rust text-2xl font-medium no-underline transition-colors px-8 py-3">Tarina</a>
+                        <a href="#knives"   class="mobile-link text-white/80 hover:text-rust text-2xl font-medium no-underline transition-colors px-8 py-3">Puukot</a>
+                        <a href="#process"  class="mobile-link text-white/80 hover:text-rust text-2xl font-medium no-underline transition-colors px-8 py-3">Prosessi</a>
+                        <a href="#gallery"  class="mobile-link text-white/80 hover:text-rust text-2xl font-medium no-underline transition-colors px-8 py-3">Galleria</a>
+                        <a href="#order"    class="mobile-link text-white/80 hover:text-rust text-2xl font-medium no-underline transition-colors px-8 py-3">Tilaa</a>
+                        <a href="#contact"  class="mobile-link text-white/80 hover:text-rust text-2xl font-medium no-underline transition-colors px-8 py-3">Ota yhteyttä</a>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center pb-10 text-sm text-white/50">
+                    <span>&copy; <span id="mobile-year"></span> Pieni puukkopaja</span>
+                </div>
             </div>
         </div>
     </header>
@@ -128,13 +135,13 @@
                         Käsistä käsiin kulkeva perinne
                     </h2>
                     <p class="text-pine leading-relaxed mb-4">
-                        Pieni puukkopaja syntyi yli kahden vuosikymmenen ajan 
-                        intohimosta metsästykseen ja erälläkäyntiin. Pieni käsityöpajani sijaitsee <strong class="text-pine">Varkaudessa</strong>,
+                        Olen <strong class="text-pine">Mika Luostarinen</strong> – puukkoseppä Varkaudesta. Pieni puukkopaja on saanut alkunsa yli kahden vuosikymmenen 
+                        intohimosta metsästykseen ja erälläkäyntiin. Käsityöpajani sijaitsee <strong class="text-pine">Varkaudessa</strong>,
                         Suomen järvialueen sydämessä.
                     </p>
                     <p class="text-pine leading-relaxed mb-4">
-                        Puukko on enemmän kuin työkalu; se on omavaraisuuden, käsityötaidon ja luonnon kunnioituksen symboli.
-                        Jokainen pajastani lähtevä puukko kantaa tätä perintöä vastuullisesti hankitusta koivukahvasta aina
+                        Puukko on minulle enemmän kuin työkalu – se kuvastaa omavaraisuutta, kädentaitoa ja kunnioitusta luontoa kohtaan.
+                        Jokainen pajasta lähtevä puukko kantaa tätä ajatusta mukanaan, aina vastuullisesti hankitusta koivukahvasta
                         käsin hiottuun hiiliterästerään.
                     </p>
                     <div class="mt-6 flex items-start gap-3 bg-linen/50 rounded-xl p-5 border border-moss/20 shadow-sm">
@@ -142,8 +149,8 @@
                         <div>
                             <h4 class="font-semibold text-pine mb-1">Vieraile pajalla</h4>
                             <p class="text-sm text-pine leading-relaxed">
-                                Olet tervetullut vierailemaan pajallani Varkaudessa nähdäksesi puukot omin silmin ja
-                                seurataksesi käsityön syntyä. Otathan yhteyttä etukäteen sopiaksesi vierailuajan.
+                                Olet aina tervetullut pajalleni Varkaudessa – pääset näkemään puukot omin silmin ja
+                                seuraamaan käsityön syntyä. Kannattaa ottaa yhteyttä etukäteen, niin sovitaan vierailuaika.
                             </p>
                         </div>
                     </div>

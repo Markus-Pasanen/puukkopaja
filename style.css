@@ -1,13 +1,57 @@
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-.mobile-link { opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease-out, transform 0.3s ease-out; }
-.mobile-menu-open .mobile-link { opacity: 1; transform: translateY(0); }
-.mobile-menu-open .mobile-link:nth-child(1) { transition-delay: 0.05s; }
-.mobile-menu-open .mobile-link:nth-child(2) { transition-delay: 0.10s; }
-.mobile-menu-open .mobile-link:nth-child(3) { transition-delay: 0.15s; }
-.mobile-menu-open .mobile-link:nth-child(4) { transition-delay: 0.20s; }
-.mobile-menu-open .mobile-link:nth-child(5) { transition-delay: 0.25s; }
+/* ===== HAMBURGER LINES ===== */
+.hamburger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+.hamburger-line + .hamburger-line {
+    margin-top: 5px;
+}
+
+/* Hamburger → X animation */
+#menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+#menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+#menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== MOBILE OVERLAY ===== */
+#mobile-overlay {
+    transition: opacity 0.35s ease, pointer-events 0.35s ease;
+}
+#mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Mobile link stagger animation */
+#mobile-overlay .mobile-link {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease-out, transform 0.35s ease-out, color 0.25s;
+}
+#mobile-overlay.open .mobile-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+#mobile-overlay.open .mobile-link:nth-child(1) { transition-delay: 0.05s; }
+#mobile-overlay.open .mobile-link:nth-child(2) { transition-delay: 0.10s; }
+#mobile-overlay.open .mobile-link:nth-child(3) { transition-delay: 0.15s; }
+#mobile-overlay.open .mobile-link:nth-child(4) { transition-delay: 0.20s; }
+#mobile-overlay.open .mobile-link:nth-child(5) { transition-delay: 0.25s; }
+#mobile-overlay.open .mobile-link:nth-child(6) { transition-delay: 0.30s; }
 
 .hero-bg {
     position: absolute; inset: 0; z-index: 0;

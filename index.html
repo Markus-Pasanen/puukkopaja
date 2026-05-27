@@ -149,7 +149,7 @@
 
                 <!-- Workshop photo -->
                 <div class="rounded-2xl overflow-hidden border border-moss/20 shadow-lg aspect-[4/3]">
-                    <img src="public/workshop.png" alt="Knife workshop in Varkaus" class="w-full h-full object-cover">
+                    <img src="public/workshop.jpg" alt="Knife workshop in Varkaus" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -161,69 +161,110 @@
             <div class="text-center mb-14">
                 <p class="text-lichen text-sm font-semibold tracking-[0.2em] uppercase mb-3">Puukot</p>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pine mb-4 font-serif">Mallit ja hinnat</h2>
-                <p class="text-pine max-w-xl mx-auto">Kolme erilaista perinnettä, jokainen valmistettu samalla huolella ja tarkkuudella.</p>
+                <p class="text-pine max-w-xl mx-auto">Jokainen puukko valmistettu samalla huolella ja tarkkuudella.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
                 <!-- Card 1: Figurine decorated -->
-                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal">
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal flex flex-col">
                     <div class="aspect-[4/3] overflow-hidden bg-moss/5">
-                        <img src="public/figurine.jpg" alt="Figurine decorated puukko knife" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="public/figurine.jpg" alt="Figuuripuukko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-6">
+                    <div class="p-6 flex flex-col flex-1">
                         <h3 class="text-xl font-bold text-pine mb-2 font-serif">Figuuripuukko</h3>
-                        <p class="text-pine text-sm leading-relaxed mb-4">
+                        <p class="text-pine text-sm leading-relaxed mb-3">
                             Monimutkaiset kahvakaiverrukset suomalaisesta kansanperinteestä inspiroituina. Jokainen kappale on keräilyesine,
                             jossa on yksityiskohtaiset koristekuvioinnit ja kiillotettu hiiliterästerä.
                         </p>
-                        <p class="text-2xl font-extrabold text-rust">120 &euro;</p>
-                        <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
-                            Tilaa nyt <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                        </a>
+                        <div class="mb-4 space-y-1">
+                            <p class="text-xs text-pine font-medium uppercase tracking-wide">Figuurit:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Jämthund</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Metso</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Pystykorva</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Hirvi</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Lohi</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Ilves</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">2 päinen leijona</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Leijona</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium">Karhu</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <p class="text-2xl font-extrabold text-rust">120 &euro;</p>
+                            <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                                Tilaa nyt <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Card 2: Basic -->
-                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal">
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal flex flex-col">
                     <div class="aspect-[4/3] overflow-hidden bg-moss/5">
-                        <img src="public/normal.jpg" alt="Basic Finnish puukko knife with birch handle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="public/normal.jpg" alt="Vuolupuukko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Peruspuukko</h3>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Vuolupuukko</h3>
                         <p class="text-pine text-sm leading-relaxed mb-4">
                             Uskollinen kumppani jokapäiväiseen kantamiseen, kalastukseen ja retkeilyyn. Yksinkertainen, tukeva
                             ja kauniin minimalistinen. Koivukahva ja hiiliterästerä.
                         </p>
-                        <p class="text-2xl font-extrabold text-rust">60 &euro;</p>
-                        <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
-                            Tilaa nyt <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                        </a>
+                        <div class="mt-auto">
+                            <p class="text-2xl font-extrabold text-rust">Alkaen 65 &euro;</p>
+                            <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                                Tilaa nyt <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Card 3: Custom order -->
-                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal">
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal flex flex-col">
                     <div class="aspect-[4/3] overflow-hidden bg-moss/5">
-                        <img src="public/special.jpg" alt="Custom order puukko knife being handcrafted" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="public/special.jpg" alt="Revontulipuukko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Tilauspuukko</h3>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Revontulipuukko</h3>
                         <p class="text-pine text-sm leading-relaxed mb-3">
                             Suunnittele oma puukkosi. Valitse terän pituus ja kahvamateriaalit luodaksesi
                             ainutlaatuisen juuri sinulle sopivan puukon.
                         </p>
                         <div class="mb-4 space-y-1">
                             <p class="text-xs text-pine font-medium uppercase tracking-wide">Terävaihtoehdot:</p>
-                            <div class="flex gap-2">
-                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium hover:border-moss transition-colors">70 mm</span>
-                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium hover:border-moss transition-colors">80 mm</span>
-                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium hover:border-moss transition-colors">95 mm</span>
+                            <div class="flex flex-nowrap gap-2">
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium whitespace-nowrap">75 mm</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium whitespace-nowrap">90 mm</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium whitespace-nowrap">95 mm</span>
+                                <span class="text-xs bg-wool px-2.5 py-1 rounded-full border border-moss/30 text-pine font-medium whitespace-nowrap">105 mm</span>
                             </div>
                         </div>
-                        <p class="text-xl font-extrabold text-rust">Alkaen 95 &euro;</p>
-                        <a href="#contact" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
-                            Kysy lisää <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
-                        </a>
+                        <div class="mt-auto">
+                            <p class="text-2xl font-extrabold text-rust">100 &euro;</p>
+                            <a href="#contact" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                                Kysy lisää <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Syksy sienipuukko -->
+                <div class="bg-wool rounded-2xl border border-drift overflow-hidden hover:shadow-xl card-lift group reveal flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden bg-moss/5">
+                        <img src="public/sienipuukko.jpg" alt="Syksy sienipuukko" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-xl font-bold text-pine mb-2 font-serif">Syksy sienipuukko</h3>
+                        <p class="text-pine text-sm leading-relaxed mb-4">
+                            Syksyisiin sieniretkiin suunniteltu puukko. Ohut ja kaareva terä sopii täydellisesti sienten siistimiseen,
+                            ja ergonominen kahva pitää otteen vakaana kosteissakin olosuhteissa.
+                        </p>
+                        <div class="mt-auto">
+                            <p class="text-2xl font-extrabold text-rust">Alkaen 60 &euro;</p>
+                            <a href="#order" class="mt-4 inline-flex items-center text-sm font-semibold text-moss hover:text-pine transition-colors no-underline">
+                                Tilaa nyt <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,9 +286,9 @@
                     <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
                         <i class="fa-solid fa-tree text-2xl text-rust"></i>
                     </div>
-                    <h3 class="font-bold text-pine mb-2">Suomalainen koivu</h3>
+                    <h3 class="font-bold text-pine mb-2">Puulajit</h3>
                     <p class="text-sm text-pine leading-relaxed">
-                        Kahvat on veistetty paikallisesta visakoivusta, joka on arvostettu lujuudestaan ja kauniista syykuvioistaan.
+                        Huolella valitut pohjoismaiset puulajit &mdash; visakoivu, pähkinäpuu, kataja ja merbau &mdash; tuovat jokaiseen kahvaan oman ainutlaatuisen syykuvionsa ja tunnun.
                     </p>
                 </div>
 
@@ -256,9 +297,9 @@
                     <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
                         <i class="fa-solid fa-fire text-2xl text-rust"></i>
                     </div>
-                    <h3 class="font-bold text-pine mb-2">Hiiliteräs</h3>
+                    <h3 class="font-bold text-pine mb-2">Terät</h3>
                     <p class="text-sm text-pine leading-relaxed">
-                        Hiiliteräksestä taotut ja lämpökäsitellyt terät, joka pysyy terävänä pitkään ja teroitus on helppoa maastossa.
+                        Käsin taotut hiiliterästerät, jotka on lämpökäsitelty ja hiottu optimaaliseen kovuuteen &mdash; ei massahiottuja, vaan huolellisesti viimeisteltyjä pitkäikäistä terävyyttä varten.
                     </p>
                 </div>
 

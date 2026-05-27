@@ -54,6 +54,7 @@
                     <a href="#about"    class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Tarina</a>
                     <a href="#knives"   class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Puukot</a>
                     <a href="#process"  class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Prosessi</a>
+                    <a href="#gallery"  class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Galleria</a>
                     <a href="#order"    class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Tilaa</a>
                     <a href="#contact"  class="text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline">Ota yhteyttä</a>
                 </nav>
@@ -70,6 +71,7 @@
                     <a href="#about"    class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Meistä</a>
                     <a href="#knives"   class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Puukot</a>
                     <a href="#process"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Prosessi</a>
+                    <a href="#gallery"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Galleria</a>
                     <a href="#order"    class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Tilaa</a>
                     <a href="#contact"  class="mobile-link text-white hover:text-rust active:text-white/70 transition-colors duration-300 no-underline py-1">Ota yhteyttä</a>
                 </nav>
@@ -299,7 +301,7 @@
                     </div>
                     <h3 class="font-bold text-pine mb-2">Terät</h3>
                     <p class="text-sm text-pine leading-relaxed">
-                        Käsin taotut hiiliterästerät, jotka on lämpökäsitelty ja hiottu optimaaliseen kovuuteen &mdash; ei massahiottuja, vaan huolellisesti viimeisteltyjä pitkäikäistä terävyyttä varten.
+                        Laadukkaat hiiliterästerät, jotka pysyvät terävinä pitkään ja ovat helposti teroitettavissa maastossa.
                     </p>
                 </div>
 
@@ -308,9 +310,9 @@
                     <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-rust/15 flex items-center justify-center group-hover:bg-rust/25 transition-colors">
                         <i class="fa-solid fa-hand-sparkles text-2xl text-rust"></i>
                     </div>
-                    <h3 class="font-bold text-pine mb-2">Käsiviimeistely</h3>
+                    <h3 class="font-bold text-pine mb-2">Käsityö</h3>
                     <p class="text-sm text-pine leading-relaxed">
-                        Jokainen pinta viimeistellään käsin &mdash; hiottu, kiillotettu ja öljytty, kunnes se sopii täydellisesti käteen.
+                        Jokainen puukko on suomalaista käsityötä ja kahvat viimeistellään käsin, kunnes ne sopivat täydellisesti käteen.
                     </p>
                 </div>
 
@@ -321,12 +323,77 @@
                     </div>
                     <h3 class="font-bold text-pine mb-2">Nahkatuppi</h3>
                     <p class="text-sm text-pine leading-relaxed">
-                        Käsin ommeltu aidosta nahkasta oleva tuppi täydentää jokaisen puukon, kuvioitu pajan tunnuksella.
+                        Käsin ommeltu aidosta nahkasta oleva tuppi täydentää jokaisen puukon.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="py-20 lg:py-28 bg-wool reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-lichen text-sm font-semibold tracking-[0.2em] uppercase mb-3">Galleria</p>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-pine mb-4 font-serif">Kuvia pajalta ja puukoista</h2>
+                <p class="text-pine max-w-xl mx-auto">Jokainen puukko on oma taideteoksensa. Katso kuvia töistäni ja työvaiheista.</p>
+            </div>
+
+            <div class="gallery-container">
+                <button class="gallery-btn prev" aria-label="Edellinen">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="gallery-track">
+                    <div class="gallery-slide">
+                        <div class="gallery-slide-inner">
+                            <img src="public/galleria1.jpg" alt="Puukko työn alla" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-slide-inner">
+                            <img src="public/galleria2.jpg" alt="Puukon kahva" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-slide-inner">
+                            <img src="public/galleria3.jpg" alt="Terän hiontaa" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-slide-inner">
+                            <img src="public/galleria4.jpg" alt="Valmis puukko" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-slide-inner">
+                            <img src="public/galleria5.jpg" alt="Puukko ja tuppi" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="gallery-btn next" aria-label="Seuraava">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="gallery-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox">
+        <button class="lightbox-close" aria-label="Sulje">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button class="lightbox-btn prev" aria-label="Edellinen">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img src="" alt="">
+        <button class="lightbox-btn next" aria-label="Seuraava">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
 
     <!-- ===== ORDER & PAYMENT ===== -->
     <section id="order" class="py-20 lg:py-28 bg-pine relative overflow-hidden reveal">
@@ -350,7 +417,7 @@
                             </div>
                             <div>
                                 <h4 class="text-white font-semibold mb-1">Sähköposti</h4>
-                                <p class="text-white text-sm">Lähetä tilauksesi tai kyselysi osoitteeseen <span class="text-white">info@pienipuukkopaja.fi</span></p>
+                                <p class="text-white text-sm">mika.luostarine@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -358,8 +425,8 @@
                                 <i class="fa-solid fa-phone text-rust"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold mb-1">Puhelinsoitto</h4>
-                                <p class="text-white text-sm">Soita suoraan tilataksesi puukon</p>
+                                <h4 class="text-white font-semibold mb-1">Puhelin</h4>
+                                <p class="text-white text-sm">+358 45 8925666</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -400,11 +467,11 @@
                         </div>
                         <div class="flex gap-4">
                             <div class="w-10 h-10 rounded-xl bg-rust/15 flex-shrink-0 flex items-center justify-center">
-                                <i class="fa-solid fa-credit-card text-rust"></i>
+                                <i class="fa-solid fa-building-columns text-rust"></i>
                             </div>
                             <div>
-                                <h4 class="text-white font-semibold mb-1">Kortti</h4>
-                                <p class="text-white text-sm">Yleisimmät pankki- ja luottokortit pajalla tapahtuvissa ostoksissa.</p>
+                                <h4 class="text-white font-semibold mb-1">Tilisiirto</h4>
+                                <p class="text-white text-sm">Perinteinen pankkisiirto ennen toimitusta tai noutoa.</p>
                             </div>
                         </div>
                     </div>
@@ -430,7 +497,7 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-pine mb-1">Sähköposti</h4>
-                            <p class="text-pine text-sm break-all">info@pienipuukkopaja.fi</p>
+                            <p class="text-pine text-sm break-all">mika.luostarine@gmail.com</p>
                         </div>
                     </div>
                     <div class="bg-wool rounded-xl p-6 border border-drift shadow-sm flex gap-4">
@@ -439,7 +506,7 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-pine mb-1">Puhelin</h4>
-                            <p class="text-pine text-sm">+358 40 123 4567</p>
+                            <p class="text-pine text-sm">+358 45 8925666</p>
                         </div>
                     </div>
                     <div class="bg-wool rounded-xl p-6 border border-drift shadow-sm flex gap-4">
@@ -447,8 +514,8 @@
                             <i class="fa-solid fa-location-dot text-rust"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-pine mb-1">Paja</h4>
-                            <p class="text-pine text-sm">Pajakatu 7, 78250 Varkaus, Suomi</p>
+                            <h4 class="font-semibold text-pine mb-1">Osoite</h4>
+                            <p class="text-pine text-sm">Tukkitie 20, 78500 Varkaus</p>
                         </div>
                     </div>
                     <div class="rounded-xl overflow-hidden border border-drift shadow-sm flex-1 min-h-[200px]">
